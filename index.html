@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,target-densitydpi=high-dpi">
+    <!-- <meta name="viewport" content="width=720, user-scalable=no, target-densityDpi=device-dpi"> -->
+
+    <title>jxnonescroll + gnb</title>
+    <link rel="stylesheet" href="resources/css/jxnonescroll-ver-1.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+
+    <script src="resources/js/jxnonescroll-ver-3.js"></script>
+
+    <style>
+        * {margin: 0;padding: 0;}
+        li {list-style: none;}
+    </style>
+
+     <style>
+     html,body {height: 100%;}
+    .jx-nonescroll {height:40%;padding: 0;}
+    .jx-nonescroll .jx-box {--overflow-y: scroll;}
+    .jx-nonescroll .jx-box > .jx-wrap {background-color: #999;}
+    .jx-nonescroll .jx-box > .jx-wrap > .jx-unit {font-size: calc(40/1080*100vw);margin-right: 20px;line-height: 100px;}
+    .jx-nonescroll .jx-box > .jx-wrap > .jx-unit.on {color: #f00;}
+
+    .jx-nonescroll .jx-box > .jx-wrap > .jx-unit > .dep2 {height:0;overflow: hidden;padding:0 10%;font-size: calc(30/1080*100vw);}
+    .jx-nonescroll .jx-box > .jx-wrap > .jx-unit > .dep2 ul > li {border-bottom: #000 solid 1px;line-height: 50px;}
+    .jx-nonescroll .jx-box > .jx-wrap > .jx-unit.sub > .dep2 {height:auto;}
+    .htxt {font-size: 50px;}
+     </style>
+
+
+</head>
+<body>
+11
+<h3>1. 가로 형태</h3>
+<p>아무 옵션을 주지 않으면 가로형태로 스크롤이 된다.</p>
+<div class="jx-nonescroll jx-nonescroll-1" >
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit on">
+        <a class="jx-cont">MAN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">WOMEN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">SPORTS &amp; OUTDOOR</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">ACCESSORIES</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">COSMETIC</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">LIFE STYLE</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+
+  var jxscroll_1 = new JXNONESCROLL( $('.jx-nonescroll-1') );
+</script>
+
+<h3>2. 가로 형태 {bAction:true}</h3>
+<p>객체를 클릭하면 앞쪽으로 이동을 한다.</p>
+<div class="jx-nonescroll jx-nonescroll-2">
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit">
+        <a class="jx-cont">MAN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">WOMEN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">SPORTS &amp; OUTDOOR</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">ACCESSORIES</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">COSMETIC</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">LIFE STYLE</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  var jxscroll_2 = new JXNONESCROLL( $('.jx-nonescroll-2') , {bAction:true} );
+</script>
+
+<h3>3. 가로 형태 {bBounce:true}</h3>
+<p>객체가 드래그 하여 이동할때 처음과 끝에 바운스가 생긴다.</p>
+<div class="jx-nonescroll jx-nonescroll-3">
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit on">
+        <a class="jx-cont">MAN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">WOMEN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">SPORTS &amp; OUTDOOR</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">ACCESSORIES</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">COSMETIC</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">LIFE STYLE</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+
+  var jxscroll_3 = new JXNONESCROLL( $('.jx-nonescroll-3') , {bBounce:true} );
+</script>
+
+
+<h3>4. 가로 형태 {bSoftMove:false} </h3>
+<p>객체가 드래그 하여 이동할때 부드럽게 움직이지 않는다.</p>
+<div class="jx-nonescroll jx-nonescroll-4">
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit on">
+        <a class="jx-cont">MAN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">WOMEN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">SPORTS &amp; OUTDOOR</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">ACCESSORIES</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">COSMETIC</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">LIFE STYLE</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  var jxscroll_4 = new JXNONESCROLL( $('.jx-nonescroll-4') , {bSoftMove:false} );
+</script>
+
+<h3>5. 세로 형태 {sDirection:'v'}</h3>
+<p>객체가 세로 형태로 바뀐다. data-direction="h" 로 주면 가로 형태로 바뀐다.</p>
+<div class="jx-nonescroll jx-nonescroll-5">
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit on">
+        <a class="jx-cont">MAN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">WOMEN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">SPORTS &amp; OUTDOOR</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">ACCESSORIES</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">COSMETIC</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">LIFE STYLE</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  var jxscroll_5 = new JXNONESCROLL( $('.jx-nonescroll-5') , {sDirection:'v'} );
+</script>
+
+<h3>6. 세로 형태 {sDirection:'v', bScroll:true} </h3>
+<p>객체가 세로 형태로 바뀌고 data-scroll="true"를 주면 터치 드래그로 움직이는게 아니라 일반 스크롤바로 움직이게 된다.  </p>
+<div class="jx-nonescroll jx-nonescroll-6">
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit on">
+        <a class="jx-cont">MAN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">WOMEN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">SPORTS &amp; OUTDOOR</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">ACCESSORIES</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">COSMETIC</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">LIFE STYLE</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  var jxscroll_6 = new JXNONESCROLL( $('.jx-nonescroll-6') , {sDirection:'v', bScroll:true} );
+</script>
+
+
+
+<h3>7. 세로 형태,  리콜 함수 {sDirection:'v',bAction:true, reCallFnc:'recall'} </h3>
+<p>객체가 움직임이 끝나고 어떤 객체가 클릭이 되었는지를 리콜로 값을 넘겨준다</p>
+<div class="jx-nonescroll jx-nonescroll-7" >
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit on">
+        <a class="jx-cont">MAN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">WOMEN</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">SPORTS &amp; OUTDOOR</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">ACCESSORIES</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">COSMETIC</a>
+      </li>
+      <li class="jx-unit">
+        <a class="jx-cont">LIFE STYLE</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  var jxscroll_7 = new JXNONESCROLL( $('.jx-nonescroll-7') , {sDirection:'v',bAction:true, reCallFnc:'recall'} );
+  function recall(v) {
+          console.log('call ' ,v);
+        }
+</script>
+
+
+<h3>7. 세로 형태이면서 그안에 서브 메뉴가 들어가있는경우 {sDirection:'v'} </h3>
+<p>객체가 움직임이 끝나고 어떤 객체가 클릭이 되었는지를 리콜로 값을 넘겨준다</p>
+<div class="jx-nonescroll jx-nonescroll-8" >
+  <div class="jx-box">
+    <ul class="jx-wrap">
+      <li class="jx-unit">
+        <h3 class="jx-cont">MAN</h3>
+        <nav class="dep2">
+          <ul>
+            <li>SUB 1 1</li>
+            <li>SUB 1 2</li>
+          </ul>
+        </nav>
+      </li>
+      <li class="jx-unit">
+        <h3 class="jx-cont">WOMEN</h3>
+        <nav class="dep2">
+          <ul>
+            <li>SUB 2 1</li>
+            <li>SUB 2 2</li>
+            <li>SUB 2 3</li>
+            <li>SUB 2 4</li>
+          </ul>
+        </nav>
+      </li>
+      <li class="jx-unit">
+        <h3 class="jx-cont">SPORTS &amp; OUTDOOR</h3>
+      </li>
+      <li class="jx-unit">
+        <h3 class="jx-cont">ACCESSORIES</h3>
+      </li>
+      <li class="jx-unit">
+        <h3 class="jx-cont">COSMETIC</h3>
+      </li>
+      <li class="jx-unit">
+        <h3 class="jx-cont">LIFE STYLE</h3>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+
+  var jxscroll_8 = new JXNONESCROLL( $('.jx-nonescroll-8') , {sDirection:'v'} );
+  function recall(v) {
+    console.log('call ' ,v);
+  }
+
+
+  $('.jx-nonescroll .jx-box > .jx-wrap > .jx-unit .jx-cont').on('click', function(e){
+
+    $(this).closest('.jx-unit').toggleClass('sub').siblings().removeClass('sub');
+
+    //서브메뉴가 서서히 나타나는 형태이면 아래 구조를 조금은 바꿔야함
+
+    setTimeout( function() {
+       jxscroll_8.reset();
+     },10);
+
+
+  })
+
+</script>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
